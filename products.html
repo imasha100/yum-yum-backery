@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Shop - Our Bakes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/yum-yum-logo.webp" alt="Yum Yum Logo" height="50">
+        Yum Yum Bakery
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Our Bakes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Products Section -->
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">Our Bakes</h1>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/chocolate donut.jpg" class="card-img-top" alt="Chocolate Doughnuts">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Doughnuts</h5>
+              <p class="card-text">Rs. 130</p>
+              <label for="quantity1">Quantity:</label>
+              <input type="number" id="quantity1" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Chocolate Doughnuts', 130, document.getElementById('quantity1').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/cream donut.jpg" class="card-img-top" alt="Cream Doughnuts">
+            <div class="card-body">
+              <h5 class="card-title">Cream Doughnuts</h5>
+              <p class="card-text">Rs. 120</p>
+              <label for="quantity2">Quantity:</label>
+              <input type="number" id="quantity2" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Cream Doughnuts', 120, document.getElementById('quantity2').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/choco cake.jpg" class="card-img-top" alt="Chocolate Cake">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Cake</h5>
+              <p class="card-text">Rs. 1350</p>
+              <label for="quantity3">Quantity:</label>
+              <input type="number" id="quantity3" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Chocolate Cake', 1350, document.getElementById('quantity3').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <img src="images/cashew cake.jpg" class="card-img-top" alt="Cashew Cake">
+            <div class="card-body">
+              <h5 class="card-title">Cashew Cake</h5>
+              <p class="card-text">Rs. 1800</p>
+              <label for="quantity4">Quantity:</label>
+              <input type="number" id="quantity4" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Cashew Cake', 1800, document.getElementById('quantity4').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <img src="images/brownie.jpg" class="card-img-top" alt="Brownies">
+            <div class="card-body">
+              <h5 class="card-title">Brownies</h5>
+              <p class="card-text">Rs. 1200 (6 pieces)</p>
+              <label for="quantity5">Quantity:</label>
+              <input type="number" id="quantity5" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Brownies', 1200, document.getElementById('quantity5').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <img src="images/cookie.jpg" class="card-img-top" alt="Chocolate Chip Cookies">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Chip Cookies</h5>
+              <p class="card-text">Rs. 675 (3 pieces)</p>
+              <label for="quantity6">Quantity:</label>
+              <input type="number" id="quantity6" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Chocolate Chip Cookies', 675, document.getElementById('quantity6').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <img src="images/cupcake.jpg" class="card-img-top" alt="Cupcakes">
+            <div class="card-body">
+              <h5 class="card-title">Cupcakes</h5>
+              <p class="card-text">Rs. 150</p>
+              <label for="quantity7">Quantity:</label>
+              <input type="number" id="quantity7" class="form-control" min="1" value="1">
+              <a href="#" class="btn btn-primary mt-3" onclick="addToCart('Cupcakes', 150, document.getElementById('quantity7').value)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proceed to Checkout Button -->
+      <div class="text-center mt-4">
+        <a href="checkout.html" class="btn btn-success">Proceed to Order</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Bakery Shop. Freshness you can taste!</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  
+  <script>
+    // Function to add product to cart
+    function addToCart(productName, price, quantity) {
+      const product = {
+        name: productName,
+        price: price,
+        quantity: parseInt(quantity)
+      };
+
+      // Get current cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if product already exists in cart
+      const existingProductIndex = cart.findIndex(item => item.name === productName);
+      
+      if (existingProductIndex !== -1) {
+        // If product exists, update quantity
+        cart[existingProductIndex].quantity += product.quantity;
+      } else {
+        // If product does not exist, add to cart
+        cart.push(product);
+      }
+
+      // Save updated cart to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(`${productName} added to cart!`);
+    }
+  </script>
+</body>
+</html>
